@@ -38,3 +38,567 @@ https://www.canva.com/design/DAGUm3XtbdQ/GVECmolKac-yErN1mUCt0Q/edit
 
 https://www.canva.com/design/DAGUmHxcqXE/rQ_3wfuZCkpLij07pQCohA/edit
 
+
+
+
+
+Hey everyone, welcome back to Code with Poonam.
+
+I hope you all are doing great today.
+
+It's a day 26 of our 100 days of coding challenge in JavaScript, and we have got another exciting problem to solve together.
+
+So today's challenge is a fun one.
+
+We are going to check whether one string is a substring of another string or not, okay?
+
+This is something you will use all the time when you're working with a text, whether it is searching, validation, or even just checking if one string exists insidethe another or not, okay?
+
+So let's open up our VS Code and start with our today's challenge.
+
+So if you see in the VS Code, the question is already written, right?
+
+That is, write a JavaScript function to check if one string is a substring of another.
+
+So this is our question.
+
+So what are the important part of this question?
+
+That we have to write a JavaScript function.
+
+So I'll take up here.
+
+And after that, what is the important part?
+
+That we have to check if one string is a substring of another string.
+
+So that also we will put here.
+
+Okay.
+
+Now since this question is asking us to check that if one string is a substring of another string, so we willdefine our function with relevance to that.
+
+So what will be our function name?
+
+Our function name will be what?
+
+Is substring, okay?
+
+So we will define our function name like this with a parenthesis, okay?
+
+Now we'll move to the next line, that is we have to check one string is a substring of another string, right?
+
+So then we will have to understand what this line mean, right?
+
+So for example, let us take one string.
+
+So I will take a string, suppose, let us assume a string here 
+
+Hello.
+
+Then we'll write, Welcome to code with Poonam.
+
+Okay, this is our string.
+
+Assume this is our string which we are putting.
+
+Okay, now we have to take another string.
+
+We can assume that that will be our substring, okay?
+
+So let us take another string, and I will write here, suppose welcome, or we can write a substring, we can take another substring, write substring one, and we can take here as a code.
+
+So this both should exist inside this.
+
+If it is existing, it should give me a true.
+
+If it is not existing, it will give me false.
+
+So that is what it is asking.
+
+If it is exist, it will give me true, and it will say, yes, it is a substring.
+
+And if it does not exist, if does not exist, I'll write down that as well, then it will return me as a false.
+
+And since it is returning me as a false, it will be no here, right, and this will be your what, yes, it's a substring.
+
+So this is what is this question expecting from us, right?
+
+Now in this case, if you see here that this is capital, W is capital.
+
+So yes, this will come here and this will accept it here because it will say yes.
+
+if we are searching, but if we go to check our second string that is code, that is c is small.
+
+So if it is goes inside the string and if it is finding out, it will give me false because the case is not matching, right?
+
+So that also point we will have to consider it that the case is not matching.
+
+If that word is existing, we have to give it true.
+
+It should not be the case that it should only match if WS capital E-L-C-O-M-E is there.
+
+It should be there, no.
+
+If it is a small case, title case, capitalize each word, whatever we are doing it, it should go and match.
+
+If that word is existing, then it should match, irrelevant of the case sensitiveness, okay?
+
+So that is what we are going to work over here.
+
+So now what we will do it here, what will be the approach then?
+
+We will be using here first of all tocheck whether that string is existing or not, what will be the first method, we will be using our includes method, okay?
+
+So we have an includes method of a string that we are going to use it.
+
+So in this, we have to pass a string and that it is going to work.
+
+So how it works out, if we are working with a string, so what we will use it, suppose this is our main string, okay, capital str.
+
+So that capital str.includes,And you will have to pass your what?
+
+Your substring which you are looking for.
+
+So inside it, that it will come and this will return to you true or false.
+
+OK, if it exists, it will give you true.
+
+If it doesn't exist, it will give you false.
+
+But we have to take care of case sensitiveness also, right?
+
+So then what we will come here and we will do it should be case insensitive we are making.
+
+So that is what I said we have to take care of case sensitive.
+
+If it is capital WI don't have to pass the input as a capital W itself.
+
+If it is small W also it should accept the welcome right.
+
+So in that case what we will do whenever we are receiving as a params.
+
+we will convert it into a lowercase.
+
+So we'll come here and we'll do what?
+
+To lowercase we will do it to each one of them, means to the string also, that is to the main string also, and to the substring also.
+
+And then we will go to find out whether it exists or not.
+
+So first we will convert it into a lowercase, and then we will check.
+
+So it will give us an ideal solution, okay?
+
+So I will just put it here.
+
+So before your include method, you will be using your tolowercase.
+
+That is where it is going to work out, and that is where we will be able to get a proper and an ideal solution, okay?
+
+So what we will do here is, let us come here and write down and let us see howWe progress with the function.
+
+OK, so we'll come here and we will write here what function and we have decided our function name will be what is substring.
+
+So I'll take it from here.
+
+And I will quickly invoke it, okay?
+
+So I'll come here and I'll quickly invoke it as a substring, okay?
+
+Now what I will do it, you know, I will not directly pass the string from here, why?
+
+Because the string will be bigger, right?
+
+So in the lengthwise it will be bigger.
+
+So let us create a two variables here.
+
+So we'll come here and we'll write main string, okay?
+
+Const main string, in this we will keep our string, that is what we have decided, that it will be our helloWelcome to code with Poonam, right?
+
+So this is what we will put it over here and let us come here and put here what const another one that is substring we will pass here.
+
+So let us write here as a substring is equal to.
+
+We can write here right now as it is welcome.
+
+Later on we will check it for the code as well.
+
+So these two test cases, we are going to check it.
+
+So don't worry about it.
+
+Okay?
+
+Now in the isusubstring, what we will do, we will pass both of them.
+
+That is main string also and our substring also.
+
+And here we will receive it like a capital str and a substring.
+
+Okay?
+
+So let us come here and let us, the way we have written here, the same way we are going to receive it as a param.
+
+Okay?
+
+So we'll come here and we will write here str and we can make this small also, no problem.
+
+So thisstr comma small str, okay, like this we will be writing it over here.
+
+So this will be our main string and this will be our substring.
+
+So let us come here and just console it out and we will check our function.
+
+Okay, so str comma sub str and let us just come here and test it out.
+
+So I'll write here node and today we are at day 26 challenge, so we'll write here node day 26, right?
+
+So you see here, you get here what?
+
+Hello, welcome to code with Poonam and then you get welcome as well.
+
+So that is what here it is happening.
+
+So we are able to get both of them inside this function, right?
+
+So this both of them is successfully printing, right?
+
+Now, that means this function is successfully running, right?
+
+Now, let us come here and let us do the things here.
+
+Now we have to use a include method.
+
+Before include method, we will have to convert it into a lowercase.
+
+So let us come here and what we will do it, we'll declare just a one variable called as a result.
+
+And what we will do, we will write here what str, it is small str, right?
+
+So small str dot to lowercase, we will convert it here itself, okay?
+
+To lowercase.
+
+So first of all, we will convert it to lowercase and now let us just test it.
+
+So resultI will write it here and we will just run it once again.
+
+to check it.
+
+So now you see, first of all, you were getting capital letters.
+
+Here means x was capital, w was capital, c was capital, right?
+
+But here everything has converted into a lowercase, right?
+
+Now, what we will do here itself, then we will use our include method, right?
+
+So 
+
+we'll use your includes method, and in this we are going to pass our substring, right?
+
+But substring is also our normal string which we are passing.
+
+So this also we will convert it into a lowercase here it says, okay, with a parenthesis.
+
+Now, if you check it, and if you do it, here you are getting true.
+
+If you pass capital small, it doesn't matter.
+
+Suppose we change your welcome as capital.
+
+Here we don't have any capital letters, right?
+
+But still it will give you true.
+
+So what we did hereWe first converted the entire string into a lower case and then our include method we are using upon it and then inside include method we have to pass our substring.
+
+That substring also we have converted into a lower case.
+
+If you want you can define two different variables and you can do that in.
+
+that way as well.
+
+I am doing it in one line itself right now.
+
+So now we have converted into a lowercase and then it is testing inside all the converted into lowercase string.
+
+So that is where it is checking and it is giving us as true.
+
+Now, if you put capital small, it doesn't matter.
+
+Suppose you put here O as a small, right?
+
+So then also it will give you a true value only, right?
+
+Ah If you come here and if you write here something YYY after that,Then it is going to give you false because it cannot find out that, right?
+
+Because welcome is there, but this is not there, right?
+
+This word doesn't exist.
+
+So this particular substring is not existing.
+
+That is why it is not going to give us, OK?
+
+So this is what we have here right now.
+
+OK, now what we will do here is.
+
+Now we are just getting true and false, right?
+
+So we will put it in a proper way our console dot log, right?
+
+So this is what now understand guys, this is we are getting a boolean values, right?
+
+So I'll just put it here as we are getting what this is a boolean values, correct?
+
+So this boolean values is what it is giving me a true if it is present.
+
+And if does not exist, it is giving me a false, right?
+
+So that is where now what we will do, we can use your if and else statement, right?
+
+We will use your if and else statement, and we don't have to compare with anything because already this is Boolean, right?
+
+If it is true, if it returns true, give me a value something.
+
+If it is false, give me something else value.
+
+That we can put it here, right?
+
+So we will come here and I will write here what if?
+
+Result I will directly write because that result is only the Boolean values that is true and false.
+
+So if result, then we will write here console.log and we will write here what inside a template literal syntax we'll write.
+
+Yes, substring we will take here.
+
+I'll write it here, then you can read it out.
+
+So this is our substring.
+
+This substring is a substring of of ourmain string, right?
+
+So I'll write here str.
+
+So we will get it as it is.
+
+Now, suppose we have written here welcome, right?
+
+Now, let us clear the terminal and we will come here and we will write here node day 26E.
+
+Yes, welcome is a substring of hello, welcome to code with Konam as it is we are getting because we are just using the string, not converted to the lowercase used, right?
+
+So we will get as it is.
+
+So yes, our substring is a substring of our str.
+
+Otherwise, else what we will write here what?
+
+come here and we will once again write our console.log statement.
+
+And inside that console.log, I will just make a copy of this again.
+
+And we will write here what?
+
+Just with a no, we will write, okay?
+
+So no, and we will write here, it's not a substring, right?
+
+So we'll come here and we will change it to here as not.
+
+And let us put here comma as well.
+
+Now let us come here and clear the terminal and one more time, let us run it.
+
+So we see here,Yes, welcome is a substring we are getting, and if you write here some other text like yyy, if you write it, let us come here and let us test it out one more time, you are getting no, it is not a substring of hello, welcome to code with Punam, right?
+
+So this is what we are getting here, right?
+
+Now what we will do, let us comment this line number 18, let us comment this line number 20 also, and let us come here and clear this terminal and we will run it one more time.
+
+So clear it and run it.
+
+So now we just getOur normal text what we have written here, correct?
+
+Now let us come here and let us invoke it one more time.
+
+OK, so we will take up another substring.
+
+So let us come here and define another substring.
+
+So we'll write here substring one is equal to and we will write here something called as a JavaScript.
+
+OK, we'll write here what JavaScript.
+
+And now we will invoke it once again.
+
+Now our string is the same, okay?
+
+In the same string we are doing it, right?
+
+So I'll come here and it will be our main string and we will write here what substring one.
+
+And now let us test it and we will put here welcome as well, okay?
+
+Properly we are going to put it, clear the terminal and rerun it one more time.
+
+Now we get here for the first instance we are getting yes and for the second one we are getting no.
+
+Why we are getting no?
+
+Why we are getting no?
+
+Because here this JavaScript is not part of the string, right?
+
+So that is what we have done here and we'll clear it here.
+
+And if you run it one more time, see first time you'll get yes.
+
+Second time you are getting no.
+
+If you make something like welcome to the world of JavaScript, here also you will get yes.
+
+So if you want to change your main string, let us come here and we will write here another string.
+
+Let us take another example or another test case we could see here.
+
+So we'll write here what?
+
+Mainstring one, we will write it here, and we will write here, welcome to the world of JavaScript.
+
+Welcome to the world of JavaScript, okay?
+
+And now let us just change it to mainstring one, okay?
+
+We will just, this one, we will keep it here itself, okay?
+
+Let us invoke it with this, okay?
+
+put it here and we will come here.
+
+And this we will put it with this.
+
+And we will make this as a main string one.
+
+So this will be our main string one now.
+
+Now you see this is another test case where we are passing, Hello, welcome to the world of JavaScript.
+
+And this is substring, we are passing as a JavaScript.
+
+Now let us clear the terminal one more time and we will see what both the time we are getting.
+
+Yes, because this is also existing, this is also existing.
+
+Now if you see here we haveShuffle the words, right?
+
+Welcome, we have written something where we have written C as capital O.
+
+Here what we have done, we have played around the letters, right?
+
+That we have written something in capital, something in small, you make it here again, E as small, and then we have played around with that.
+
+Still we are getting yes because this, at the end of the day, what is this?
+
+It is a welcome.
+
+So this welcome is existing in the string, and we are able to get this, right?
+
+And here also,we are able to get it over here, correct?
+
+So both the test cases are properly passing and we have done it properly, right?
+
+So once again, if you want to run it, clear the terminal and rerun it and test it, right?
+
+So we are able to get this, correct?
+
+So both the test case are successfully passing, correct?
+
+Both the times we are getting, yes, correct?
+
+Now, let's have a recap what we have done.
+
+If we come here, we have defined a function is substring because this question was asking us to check if one string is a substring of another or not.
+
+That is what we have done here.
+
+After that, what we have done, we have understood what is this particular line means.
+
+We took one example with this Hello, welcome to code with Poonam.
+
+And then what we did, we have taken the string, two string differently we have taken and we have played around with this.
+
+We have worked with the case sensitiveness as well that we have made this one ascase insensitive.
+
+If we are passing as a capital small, it doesn't matter.
+
+It will work the way it has to be worked.
+
+That is why we have used what?
+
+We have used two lowercase for that.
+
+So whatever the string, main string we are passing, that also we converted to a lowercase and our substring also lowercase.
+
+That is why it is properly able to match up, right?
+
+Then we are using our, on that we are going to use our include method.
+
+If that method returns true, that means it is a substring.
+
+And if doesn't returns true, that means if it returns false, it is not a substring.
+
+That is what we have put it down in our function as well.
+
+Function is substring, then str, substr, we are taking as a params correct.
+
+And then we have defined one variable that is a result, and in that we have convertedinto a lowercase, and then our include method, and then we are passing our substring, which we have converted into a lowercase.
+
+So that is where it is testing right.
+
+Then we tested that console dot log result.
+
+We were getting what true and false.
+
+Now since this is a Boolean value itself, we don't have to compare it again.
+
+So we just did what if result, that means if true, at the end of the day, this is returning me what if it is true, then we have to get this particular line printed.
+
+Otherwise, if it is false, you get this line printed.
+
+That is why we didn't had to do any kind of comparison here.
+
+that is what we have done.
+
+And if you see here, after that, we have tested with two test cases, right?
+
+So this was our test case one, and this was our test case two, where we have passed the two main string, correct?
+
+This was first string, and this was our another string.
+
+And again, we have passed our substrings to both of them, and we have invoked this function two times 
+
+where we have passed our main string and substring.
+
+Here we have passed our main string one and substring one.
+
+And that is where we were able to get it.
+
+guys, in the upcoming videos, we will try to solve more questions on this.
+
+So don't forget to like, subscribe, and hit the notification bell so you don't miss any of the future challenges.
+
+Keep coding, keep learning, and I'll see you all up in the next video.
+
+Thank you so much, guys.
+
+Take care.
+
+Bye bye.
+

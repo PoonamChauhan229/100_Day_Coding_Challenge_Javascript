@@ -1,0 +1,48 @@
+Namsakar sabke, Code with Poonam pe phir se swaagat ba.
+
+Aaj humar JavaScript mein 100 din ka coding challenge ke ekiswaa din baa.
+
+Aaj ke challenge mein hum du object ke kaise merge kare ke okar tariqa seekheke.
+
+Ee kaam bahut hi useful baa jab aapan ke do alag-alag data ke milake manage kare ke baa aur unke properties ke ek sath laawe k baa.
+
+To chali, aaj ke challenge shuru kare aur VS Code khole.
+
+Jaisan ki VS Code mein question likhal baa:
+
+Question ka baa?
+Humke ek aisan JavaScript function likhe ke baa jo do object ke merge kare aur sab properties ke ek sath combine karke rakhe.
+
+Chali ee question ke thik se samjhe ke kosis kari.
+
+Sabse important baat ee baa ki humke ek JavaScript function banawa ke baa jo do object ke merge karke sab properties ke le aai.
+
+Ab hum function ke naam rakhat bani "mergeObjects".
+
+Spread Operator ke kaam kaise kare
+JavaScript mein spread operator kaam aayega. Ee ... teen dot ke roop mein likhal jala.
+
+Ee operator kaam kare la properties ke naya object mein spread karke milawa mein.
+
+Example ke liye, maan li ke humra paas do object baa:
+
+javascript
+Copy code
+const obj1 = { A: 1, B: 30 };
+const obj2 = { C: 56, D: 45 };
+Jab hum dono object ke spread operator ka madad se combine karenge, result aisan aayega:
+
+javascript
+Copy code
+const mergedObject = { ...obj1, ...obj2 };
+console.log(mergedObject); // Output: { A: 1, B: 30, C: 56, D: 45 }
+Ee Kaise Kaam Kare La?
+Jab hum { ...obj1, ...obj2 } likhat bani, ee sabse pahile ek naya empty object banawat baa, aur phir obj1 aur obj2 ke properties usme daal de la.
+
+Ee method ke madad se hum do ke badle mein jitna bhi object chahiye merge kar sakat bani.
+
+Aakhir mein, hum sab kuch console mein dekh sake la aur function ke kaam check kar sakat bani.
+
+To aaj ke ee chhota aur easy challenge ke apne style mein try kari aur alag-alag test case aur zyada object ke sath experiment kari.
+
+Video ke ant mein, agar ee pasand aaye ta like, share aur subscribe kare na bhuliyega. Kal ke naye challenge ke sath phir milab! Dhanyawaad!
