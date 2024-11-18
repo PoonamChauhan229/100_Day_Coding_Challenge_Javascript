@@ -6,7 +6,7 @@
 // This is a fun way to work with strings and arrays in JavaScript.
 
 // Challenge Overview:
-// Given a sentence, reverse each word individually but maintain the word order in the sentence.
+// Write JS Function to reverse each word individually but maintain the word order in the given sentence.
 // For example, the input "Welcome to JavaScript" should return "emocleW ot tpircSavaJ".
 
 //Approach
