@@ -2,17 +2,21 @@
 
 // This is Day 30 of our 100 Days of Coding Challenge in JavaScript.
 
-// Today, we’ll dive into **string manipulation** and solve a fun little challenge. 
-// We have to checks if a given string starts and ends with the same character
+// Today, we’ll dive into **string manipulation** and we will check if a given string starts and ends with the same character
 // This is a common operation in text processing or when validating patterns in strings.
+
+// Lets proceed with todays challenge and open up our VS code.
 
 // Challenge Overview:
 // Write a function that checks if a given string starts and ends with the same character. 
 
 
 // Let’s break this problem down step by step! 🚀
-
-function startsAndEndsWithSameChar(str) {
+// Js Function >startsEndsSame
+// given string starts and ends with the same character
+// >> Compare the first and last characters of the string
+//  str[0] === str[str.length - 1];
+function startsEndsSame(str) {
     console.log("Input String:", str);
 
     // Step 1: Handle the edge case for empty strings
@@ -23,20 +27,22 @@ function startsAndEndsWithSameChar(str) {
 
     // Step 2: Compare the first and last characters of the string
     const result = str[0] === str[str.length - 1];
-    console.log("Starts and Ends with Same Character:", result);
+    console.log(result);
 
     // Step 3: Log a detailed result
     if (result) {
         console.log(`Yes, "${str}" starts and ends with the same character.`);
+        console.log("--------------")
     } else {
         console.log(`No, "${str}" does not start and end with the same character.`);
+        console.log("--------------")
     }
 }
 
 // Example calls to test our function:
-startsAndEndsWithSameChar("radar"); // Expected output: true
-startsAndEndsWithSameChar("hello"); // Expected output: false
-startsAndEndsWithSameChar(""); // Expected output: false
+startsEndsSame("radar"); // Expected output: true
+startsEndsSame("hello"); // Expected output: false
+startsEndsSame(""); // Expected output: false
 
 // Let’s break down the expected results:
 // 1. For "radar", the first and last characters are both 'r', so the output is true.
