@@ -2,11 +2,13 @@
 
 // This is Day 30 of our 100 Days of Coding Challenge in JavaScript.
 
-// Today, we’ll dive into **string manipulation** and solve a fun little challenge. 🌟
+// Today, we’ll dive into **string manipulation** and solve a fun little challenge. 
+// We have to checks if a given string starts and ends with the same character
+// This is a common operation in text processing or when validating patterns in strings.
 
 // Challenge Overview:
 // Write a function that checks if a given string starts and ends with the same character. 
-// If the string is empty, return `false`. This is a common operation in text processing or when validating patterns in strings.
+
 
 // Let’s break this problem down step by step! 🚀
 
