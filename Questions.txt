@@ -1,0 +1,10 @@
+Date: 19th Nov 2024
+
+33-Count the number of occurrences of a character in a string.
+
+34-Convert a camelCase string to snake_case.
+
+35-Sort the characters of a string alphabetically.
+
+36-Check if a string matches a specific pattern
+
