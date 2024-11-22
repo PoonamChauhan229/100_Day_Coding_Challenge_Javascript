@@ -1,47 +1,51 @@
-
-Day 36: Check if a String Matches a Specific Pattern
 // Hey everyone, welcome back to Code with Poonam! 🎉
 
-This is Day 36 of our 100 Days of Coding Challenge in JavaScript.
+// This is Day 36 of our 100 Days of Coding Challenge in JavaScript.
 
-Today’s challenge is all about checking if a string matches a specific pattern. 💡
-This challenge will help you get comfortable using regular expressions in JavaScript.
+// Today’s challenge is about counting vowels and consonants in a string. 💡
+// It’s a fun way to practice string manipulation and regular expressions!
 
-Challenge Overview:
-Check if a string follows a specific pattern using regular expressions.
-For example, verify if "abc123" contains only letters and numbers.
+// 🎯 Challenge Overview:
+// Write a JS Function to count the number of vowels and consonants.
+// For example, 
+// Input : "JavaScript", 
+// Output :{ vowels: 3, consonants: 7 }.
 
-Approach:
+// match() >>  is used to retrieve matches from a string based on a pattern and returns an array containing the results
+// pattern >> /[aeiouAEIOU]/g
+// .length
+// str.length -vowels.length >> consonantsCount
 
-Define the pattern using a regular expression.
-Use .test() to check if the string matches the pattern.
-Let’s solve this step by step! 🚀
+// Let’s break this down step by step! 🚀
 
-javascript
-Copy code
-function matchesPattern(str, pattern) {
-    console.log("String to Check:", str);
-    console.log("Pattern:", pattern);
+function countVowelsAndConsonants(str) {
+    console.log("Input String:", str);
 
-    // Step 1: Test the string against the pattern
-    const result = pattern.test(str);
-    console.log("Does it match?", result);
+    // Step 1: Match all vowels using the regex [aeiouAEIOU]
+    const vowelsCount = str.match(/[aeiouAEIOU]/g).length
+    console.log("Vowels Count:", vowelsCount);
 
-    return result;
+    // Step 2: Match all consonants using the regex [a-zA-Z] excluding vowels
+    const consonantsCount = str.length - vowelsCount;
+    console.log("Consonants Count:", consonantsCount);
+
+    // Step 3: Return the counts as an object
+    const result = { vowels: vowelsCount, consonants: consonantsCount };
+    console.log("Result:", result);
 }
 
-// Example call to test the function:
-const input = "abc123";
-console.log(matchesPattern(input, /^[a-zA-Z0-9]+$/)); // Expected output: true
-Breakdown of the Example:
+// 🛠️ Example Usage:
+countVowelsAndConsonants("JavaScript");
+countVowelsAndConsonants("Function");
 
-The pattern /^[a-zA-Z0-9]+$/ ensures the string contains only letters and numbers.
-The string "abc123" matches this pattern, so the result is true.
-The string "abc@123" fails the pattern because it contains @.
-Try this challenge with your own patterns and see the results!
-Regular expressions are incredibly powerful and useful in JavaScript.
+// 🔍 Breakdown of the Example:
+// - For "JavaScript":
+//   - Vowels: 'a', 'a', 'i' = 3.
+//   - Consonants: 'J', 'v', 'S', 'c', 'r', 'p', 't' = 7.
+// - Final Output: { vowels: 3, consonants: 7 }.
 
-And that’s all for today! 🎉
-Don’t forget to like, share, and subscribe for more daily coding challenges.
-See you tomorrow for another exciting problem to solve! 🚀
+// Try it out with your own strings and share your results in the comments! 👇
 
+// And that’s it for today, folks! 🎉
+// If you enjoyed this challenge, smash that like button, share this video with your coder friends, and subscribe for more exciting coding problems!
+// See you tomorrow for Day 37. 🚀
