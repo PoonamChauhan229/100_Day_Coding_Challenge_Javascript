@@ -15,7 +15,7 @@
 // - "MCMXCIV" → 1994
 
 // 🛠️ Approach:
-// 1. Create a map of Roman numeral characters to their integer values.
+// 1. Create an object Roman numeral characters and their integer values.
 // 2. Loop through the Roman numeral string and add/subtract the corresponding values based on the numeral rules.
 // 3. If the current numeral is smaller than the next one, subtract it; otherwise, add it.
 
