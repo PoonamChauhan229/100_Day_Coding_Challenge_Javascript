@@ -1,69 +1,59 @@
-// Hey everyone, welcome back to Code with Poonam! 🎉
+// Using the method of looping, write a program to print the table of 9 till N in the format as follows:
+// (N is input by the user)
 
-// This is Day 40 of our 100 Days of Coding Challenge in JavaScript.
+// 9 18 27...
 
-// 🌟 Before we dive into today’s challenge, let me show you something exciting!
-
-// Today, I’m exploring **GUVI’s CodeKata**—an amazing platform to practice coding and improve problem-solving skills! 💻
-// I’ll give you a quick walkthrough of GUVI’s site and the CodeKata page so you can see how easy and fun it is to practice coding there. 🌐
-
-// - GUVI offers coding and upskilling courses in multiple languages, making tech learning accessible to everyone.
-// - **CodeKata**, specifically, is their playground for coders like us. It has problems for every level, from beginners to advanced! 🚀
+// Print NULL if 0 is input
 
 
+// Input Description:
+// A positive integer is provided as an input.
 
-// Let’s check it out first, and then we’ll dive into today’s challenge!
-
-// 🎯 Challenge Overview:
-// Write a function to print the table of 9 up to a given number.
+// Output Description:
+// Print the table of nine with single space between the elements till the number that is input.
 // For example:
 // Input: `3`
 // Output: `9 18 27`
 
-// 🛠️ Approach:
-// 1. Use an empty array to store the table values dynamically.
-// 2. Use a loop to calculate the multiples of 9 up to the given limit.
-// 3. Use the spread operator to convert the array into a single line of output.
+// JS Function                >>printTableNine()
+// print the table of 9 till N
+// Print NULL if 0 is input
 
-// Let’s solve this step by step! 🚀
+//Approach:
+//for loop >> start >>1 end 3 i++
+// (let i=1;i<=N;i++){// 9*i}
+//i=1;i<=3;i++ >>9*i >>9*1=9
+//i=2;i<=3;i++ >>9*i >>9*2=18
+//i=3;i<=3;i++ >>9*i >>9*3=27
+//i=4;i<=3 >>loop will terminate
 
-function printTableOfNine(limit) {
-    console.log("Input Limit:", limit);
+//[]>>push()>>add up the elemnt at the end >>[9,18,27]
+//Spread Operator >>(...[]) >>Spread out the elements of the array
+//join Method  >>[].join(" ")>>Bring together the elements of the array
 
-    // Step 1: Initialize an empty array
-    const table = [];
+// Print NULL if 0 is input
+//early return
+// if(N<=0){NULL return;}
 
-    // Step 2: Generate the table using a loop
-    for (let i = 1; i <= limit; i++) {
-        table.push(9 * i); // Calculate and add each multiple of 9
-    }
-
-    // Step 3: Print the result using the spread operator
-    console.log("Table of Nine:", ...table);
+function printTableNine(N){
+ // console.log(N)
+ if(N<=0){
+  console.log("Null")
+  return;//early return
+ }
+  const table=[]
+  for(let i=1;i<=N;i++){
+   // console.log(i,9*i)
+    table.push(9*i)
+  }
+ // console.log(table)
+  //Spread Operator
+  console.log("Table of Nine using Spread Operator:",...table)
+  //join Method 
+  console.log("Table of Nine using join Method :",table.join(" "))
 }
+printTableNine(3)
+printTableNine(0)
+printTableNine(-5)
+printTableNine(5)
 
-// Example Usage:
-const input = 3; // Change this to test with other inputs
-printTableOfNine(input); // Expected Output: 9 18 27
-
-const input2 = 5;
-printTableOfNine(input2); // Expected Output: 9 18 27 36 45
-
-// 🔍 Example Breakdown:
-// For the input `3`:
-// - Iteration 1: Add `9` to the array → [9]
-// - Iteration 2: Add `18` to the array → [9, 18]
-// - Iteration 3: Add `27` to the array → [9, 18, 27]
-// Final Output: `"9 18 27"`
-
-// ✨ Why GUVI’s CodeKata?
-// Practicing coding regularly is essential, and platforms like CodeKata make it enjoyable and structured. 
-// Whether you’re learning to code or preparing for interviews, it has something for everyone!
-
-// 💡 What’s next?
-// Try solving this challenge directly on GUVI’s CodeKata and see how many problems you can crack today!
-// I’ll leave the link to GUVI’s site and CodeKata page in the description below.
-
-// And that’s a wrap for today! 🎉
-// Don’t forget to like, share, and subscribe for more daily coding challenges!
-// See you tomorrow for another exciting problem to solve. 🚀
