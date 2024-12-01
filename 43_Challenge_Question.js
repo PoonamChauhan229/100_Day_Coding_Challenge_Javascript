@@ -25,7 +25,7 @@ function removeOccurrences(arr, target) {
 
     // Step 2: Return or log the result
     console.log("Updated Array:", result);
-    return result;
+ 
 }
 
 // Example Usage:
