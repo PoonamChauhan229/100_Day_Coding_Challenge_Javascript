@@ -25,7 +25,7 @@ function removeOccurrences(arr, target) {
 
     // Step 2: Return or log the result
     console.log("Updated Array:", result);
- 
+    return result;
 }
 
 // Example Usage:
@@ -38,8 +38,14 @@ removeOccurrences(array, targetValue); // Output: [1, 3, 4]
 // 1. The array [1, 2, 3, 4, 2, 2] contains three occurrences of 2.
 // 2. The filter method removes all occurrences of 2, leaving [1, 3, 4].
 
-// Try this function with your own arrays to see the magic in action! ✨
+// 🔍 Why is this challenge important?
+// Removing specific elements from an array is a common operation in coding interviews and real-world projects. 
+// It can be applied to scenarios like filtering user data, cleaning up lists, or preprocessing inputs for algorithms.
 
-// GUVI's CodeKata is an amazing playground for coders like us to practice challenges like this. Head over to their platform and upskill yourself! 🔥
+// 💡 Fun Fact:
+// The `filter()` method is a powerful tool in JavaScript, making tasks like this efficient and concise. 
+// It’s a great way to manipulate arrays without mutating the original one!
+
+// Try this function with your own arrays to see the magic in action! ✨
 
 // That’s all for today! Don’t forget to like, share, and subscribe for more coding content. See you tomorrow with another exciting problem! 🚀
