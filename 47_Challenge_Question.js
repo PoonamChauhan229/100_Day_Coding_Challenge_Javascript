@@ -56,4 +56,5 @@ isWeekend('2024-12-03'); // Output: "Its not a Weekend day" (Tuesday)
 // 💡 Fun Fact:
 // The `getDay()` method in JavaScript starts the week on Sunday (0) instead of Monday, unlike many other systems!
 
-// That’s all for today! Don
+// That’s all for today! Don’t forget to like, share, and subscribe for more coding content. See you tomorrow with another exciting problem! 🚀
+
