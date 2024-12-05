@@ -1,19 +1,16 @@
-Date: 19th Nov 2024
+49
+Inclusive and Exclusive Ranges:
+Write the function to check if the number lies within the range but exclude the boundaries (strictly between the lower and upper bounds).
 
-33-Count the number of occurrences of a character in a string.
+50
+Sum of Numbers in a Range:
+Write a function that calculates the sum of all integers in a range [lower, upper].
 
-34-Convert a camelCase string to snake_case.
+51
+Multi-Range Check:
+Write a function that checks if a number lies within multiple ranges.
+Example: Check if 15 lies in either [10, 20] or [30, 40]
 
-35-Sort the characters of a string alphabetically.
-
-__________________________________________
-
-36-Count the number of vowels and consonants in a string.
-
-37-Reverse the entire sentence (word order and character order).
-
-38-Write a function to rotate an array by k positions to the right.
-
-39-Remove duplicate characters from a string.
-
-40-
+52
+Find Missing Numbers in a Range:
+Given an array of numbers and a range [lower, upper], find all the missing numbers in the range.
