@@ -15,6 +15,8 @@
 // 🚀 Approach:
 // 1. Define the function `isWithinRange` which takes three arguments: `number`, `lower`, and `upper`.
 // 2. Use a simple `if` condition to check if the `number` is greater than or equal to `lower` and less than or equal to `upper`.
+// >= <= && >> this will be passed in our if else statement
+// number >= lower && number <= upper
 // 3. If the number satisfies the condition, log a message stating that the number lies within the range.
 // 4. If the number doesn’t satisfy the condition, log a message saying it doesn’t lie within the range.
 // 5. The function will check both bounds inclusively (i.e., both `lower` and `upper` values are part of the range).
