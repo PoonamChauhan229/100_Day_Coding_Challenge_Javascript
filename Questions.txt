@@ -9,3 +9,14 @@ Write a function that calculates the sum of all integers in a range [lower, uppe
 51
 Find Missing Numbers in a Range:
 Given an array of numbers and a range [lower, upper], find all the missing numbers in the range.
+
+52
+
+
+53
+
+
+54
+
+
+55
