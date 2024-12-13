@@ -4,7 +4,7 @@
 // Today’s challenge is all about calculating the **Average of an Array**.
 
 // 🚀 Challenge Overview:
-// Write a function to calculate the average of all numbers in a given array.
+// Write a JS function to calculate the average of all numbers in a given array.
 
 // 💡 Example:
 
