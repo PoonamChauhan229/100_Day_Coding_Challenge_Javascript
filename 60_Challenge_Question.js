@@ -36,11 +36,11 @@ function sortarray(arr){
             // Descending Order          
             if(arr[i]<arr[j]){
                 console.log(`Inside= i=${i},j=${j},arr[i]=${arr[i]},arr[j]=${arr[j]}`);
-                console.log(`Before swapping = ${arr}`);
+                console.log(`Before swapping = [${arr}]`);
                 temp=arr[i];
                 arr[i]=arr[j];
                 arr[j]=temp;
-                console.log(`After swapping = ${arr}`);
+                console.log(`After swapping = [${arr}]`);
             }            
         }
         console.log(`J loop ends here and again i loop starts`);
