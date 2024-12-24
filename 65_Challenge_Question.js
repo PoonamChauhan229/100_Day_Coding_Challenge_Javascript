@@ -67,9 +67,7 @@ findFirstPositiveNum([1, -2, -3, -4, 5, 6, -7], 3); // Output: [1, 0, 5, 5, 5]
 findFirstPositiveNum([-12, 13, 14, -16], 3); // Output: [13, 13]
 findFirstPositiveNum([-5, -4, -3], 2); // Output: [0, 0]
 
-// 🌟 Key Takeaways:  
-// - **Sliding Window with Nested Loops**: This method ensures we check each subarray of size `k` thoroughly.  
-// - **Edge Cases**: Consider arrays with no positive numbers or subarrays smaller than `k`.  
+
 
 // 🚀 Why This Challenge is Important:
 // This challenge helps optimize algorithms using the sliding window technique, improving time efficiency. It's crucial for technical interviews and real-world applications like data streaming and packet processing, where handling large datasets efficiently is key.  
