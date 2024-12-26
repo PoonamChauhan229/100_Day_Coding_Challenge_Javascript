@@ -22,18 +22,17 @@
 // i=6 j=7 ||15                     >>-1 >> (7<7) false 
 
 // next smallest element
-// if condition >>arr[j]<arr[i] >> break
+// if condition >>arr[j]<arr[i] >> break;
 
 // Print -1
-// found=false 
-// condition >>arr[j]<arr[i] >> true >> found=true 
+// found=false
+// condition >>arr[j]<arr[i] >> true >> found=true
 // condition >>arr[j]<arr[i] >> false >>-1
 
-// result =[]
-// push Method >> true >> push >>next smallest element
-// push Method >> false>> push >>-1
-//  [7, 3, 3, 2, 1, -1,-1] >>final output
-
+// result=[]
+// push Method >>true >>push >>next smallest element
+// push Method >>false >>push >>-1
+// [7, 3, 3, 2, 1, -1, -1] >>final output
 
 function nextSmallerElement(arr){
     let result=[]
@@ -58,7 +57,3 @@ function nextSmallerElement(arr){
     console.log(`Next Smallest Element for each Element >`,result)
 }
 nextSmallerElement([10, 7, 9, 3, 2, 1, 15])
-
-
-
-
