@@ -1,93 +1,92 @@
-// Hey Everyone 👋🏻 Welcome Back to code with Poonam
-// Its Day 77 of 100 Days of Coding Challenge in JavaScript
-
-// Today’s challenge is to **Rearrange Vowels in a String**.  
-
-// 📝 **Problem Statement**:  
 // Write a JavaScript function that rearranges the vowels in a string in ascending order while keeping the consonants in their original positions.  
 
 // 🧩 **Input Example**:  
 // 1️⃣ Input: `"selva"` → Output: `"salve"`  
-// 2️⃣ Input: `"ebcda"` → Output: `"abcde"`  
+// 2️⃣ Input: `"ebcda"` → Output: `"abcde"` 
 
-// 🛠️ **Approach**:  
-// Use Loop +Array methods +String methods+Conditional Statements
+// JavaScript function             >>rearrangesVowels()
+// rearranges the vowels in a string in ascending order
+// keeping the consonants in their original positions.
 
-// Create an array and store our Vowels
-// vowels=[`a`, `e`, `i`, `o`, `u`]
+// 1️⃣ Input: `"selva"` → Output: `"salve"` 
+// consonants >>slv
+// vowels     >>ea  >>ae
+// s_lv_  >>salve
 
-// vowelist=[] >> To store vowels
-
-// charlist=[] >> Initially >> store here null as per the length of string and then finally we will update the Final result using Array.fill() method
-// charList = new Array(string.length).fill(null);
+// Approach:
+// vowels=["a","e","i","o","u"]  >>list of Vowels
+// vowelsList=[] >>Store Vowels of our String
+// charList=[]   >> Final Output >>using Array.fill() >> null >> stringlength
+// charList=new Array(string.length).fill(null)
 // charList=[null,null,null,null,null]
 
-// Step1 :
+// Step1: Charcter of a String >>Vowel Or not a Vowel
+// >>Vowel      >>Push >>VowelList Array
+// >>Consonants >>Push >>CharList Array >>original positions.
+// Loop >> start >>0 end>>string.length-1
 
-// Loop through the string and check if the character is a vowel or not using include method
-// If it is a vowel >> push it into the vowelist
-// Else >> place it directly into the charlist at the same position
-
-// for (let i = 0; i < string.length; i++) {
-//     if (vowels.includes(string[i])) {
-//         vowelList.push(string[i]); // Collect vowels
-//     } else {
-//         charList[i] = string[i];  // Place consonant directly
-//     }
+// for(let i=0;i<string.length;i++){
+// if(vowels.includes(string[i])){//includes >>true
+    // push
+    // vowelList.push(string[i]) >>ea
+// }else{
+    // push
+    // charList[i]=string[i] //original positions. slv >>s_lv_
 // }
-// vowelList=[e,a]  >> sort() >> ["a","e"]
-// charList=["s",null,"l","v",null]
+// }
+// vowelList=["e","a"] >>sort() >>vowelList.sort() >>["a","e"]
+// charList=["s",null,l,v,null]
 
-Step2:
-// Reinsert the sorted vowels back into the string while keeping consonants fixed. 
-// vowelIndex =0 ;// move as per the length of vowelList and we will increment it
-    // vowelIndex = 0;
-// Loop >> start 0 end >> charList.length
-// charList[i] === null >> if condition
-// assign it to charList[i] >> vowelList[vowelIndex++]
-    // for (let i = 0; i < charList.length; i++) {
-    //     if (charList[i] === null) {
-    //         charList[i] = vowelList[vowelIndex++];
-    //     }
-    // }
-// 🚀 **JavaScript Implementation**:
-function rearrangeVowels(string) {
-    const vowels = ['a', 'e', 'i', 'o', 'u']; // Vowel list
-    let vowelList = [];                       // To store vowels
-    let charList = new Array(string.length).fill(null); // Placeholder for final characters
+// Step2 :Resinsert the vowels inside charList Array >>original positions.
+// vowelIndex=0
+// Loop >>start >>0 endpoint >>charList.length-1
+// for(let i=0;i<charList.length;i++){
+// if(charList[i]==null){
+// updtae the VowelList charcter
+// charList[i]=vowelList[vowelIndex++]
+// }
+// }
+// charList >> join("") >> string
+// charList.join("") >>salve
 
-    // Step 1: Separate vowels and consonants
-    for (let i = 0; i < string.length; i++) {
-        if (vowels.includes(string[i])) {
-            vowelList.push(string[i]); // Collect vowels
-        } else {
-            charList[i] = string[i];  // Place consonant directly
+function rearrangesVowels(string){
+    //console.log(string)
+    let vowels=["a","e","i","o","u"]
+    let vowelList=[]
+    let charList=new Array(string.length).fill(null)
+   // console.log(charList)
+
+    // Step1:
+    for(let i=0;i<string.length;i++){
+        if(vowels.includes(string[i])){
+            vowelList.push(string[i])
+        }else{
+            charList[i]=string[i]
         }
     }
-    vowelList.sort();
+   // console.log(vowelList)
+    //console.log(charList)
+    vowelList.sort()
+  //  console.log(vowelList)
 
-    // Step 3: Insert sorted vowels back into the empty slots
-    let vowelIndex = 0;
-    for (let i = 0; i < charList.length; i++) {
-        if (charList[i] === null) {
-            charList[i] = vowelList[vowelIndex++];
+    // Step2:
+    let vowelIndex=0;
+    for(let i=0;i<charList.length;i++){
+        if(charList[i]==null){
+            charList[i]=vowelList[vowelIndex++]
         }
     }
+   // console.log(charList)
+    console.log(charList.join(""))
 
-    // Step 4: Return the rearranged string
-    console.log(charList.join(""));
+
 }
+rearrangesVowels("selva")
+rearrangesVowels("ebcda")
 
-// 🔢 **Test Cases**:
-rearrangeVowels("selva");   // Output: "salve"
-rearrangeVowels("ebcda");   // Output: "abcde"
-rearrangeVowels("hello");   // Output: "holle"
-rearrangeVowels("aeiou");   // Output: "aeiou"
 
-// 💡 **Why is this challenge useful?**  
-// This challenge helps you practice working with string manipulation and array handling in JavaScript.  
-// Mastering such techniques is essential for interview questions and algorithmic problem-solving.  
 
-// Dont forget to like, share, and subscribe to my channel for more exciting content!
-// 🎉 Keep coding and pushing your limits! See you tomorrow with an another challenge 🚀 
-// Thank You! 
+
+
+
+
