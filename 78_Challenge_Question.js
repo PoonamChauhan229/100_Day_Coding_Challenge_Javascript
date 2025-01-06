@@ -1,80 +1,58 @@
-// 📌 **Hey Everyone 👋🏻 Welcome Back to Code with Poonam!**
-
-// 🎯 **It's Day 77 of the 100 Days of Coding Challenge in JavaScript**
-
-// ✅ **Today's Challenge: Check if Two Strings are Complementary**
-// **Problem Statement:**
-// Write a JavaScript function that checks if two strings together contain all 26 English letters exactly once.
+// Write a JavaScript function that Check if two strings are complementary (together contain all 26 English letters exactly once).
 
 // 📦 **Input Example:**
 // 1️⃣ Input String1 = 'ABDCFGIJKLMNOPQUVWXYZ';
 // 2️⃣ Input String2 = 'EHRST';
 // ✅ Output: 'yes'
 
-// Input String1 = 'AABBCC',
-// Input String2 = 'DDEEFF',
+// 1️⃣ Input String1 = 'AABBCC',
+// 2️⃣ Input String2 = 'DDEEFF',
 // ❌ Output: 'no'
 
-// 🛠️ **Approach:**
-// We will solve this using **JavaScript string methods, Sets, and Regular Expressions (RegEx)**.  
-// The goal is to determine whether two strings together contain all **26 English letters** exactly once.  
+// JavaScript function  >>areComplementary()
+// Check if two strings are complementary
+// complementary>>together contain all 26 English letters exactly once
 
-// 🎯 **Steps to Solve the Problem:**
-// **Step 1: Combine the Strings**
-// - Concatenate both strings into a single string for easy checking.  
-// combinedStr = string1 + String2;
+// Approach
+// Combine the String >>Concat
+// combinedStr=string1+string2
 
-// **Step 2: Convert to Lowercase and Remove Duplicates**
-// - Convert the combined string to lowercase using `.toLowerCase()` to handle case insensitivity.
-// lowercaseStr = combinedStr.toLowerCase();  
-// - Use a `Set` to store unique characters only, as a Set automatically filters out duplicates.  
-//  uniqueChars = new Set(lowercaseStr); 
+// lowercase >>toLowerCase()
+// lowercaseStr=combinedStr.toLowerCase()
 
-// **Step 3: Check for 26 Unique Letters** and also its should contain only a-z characters
-//  Count the number of unique characters stored in the `Set`using size property.
-// uniqueChars.size
-// Regex  >>/^[a-z]+$/.test(lowercaseStr)
+// Remove the duplicate  >>Set()
+// uniqueChars=new Set(lowercaseStr) >>Set object
 
-// - Regular expressions (RegEx) help in pattern matching and validation.  
-// - Here, we use `/^[a-z]+$/` to ensure only lowercase English letters are present.  
-// - **Breakdown of the RegEx:**  
-//    - `^` → Start of the string.  
-//    - `[a-z]+` → Match one or more lowercase letters (`a` to `z`).  
-//    - `$` → End of the string.  
-// - If the combined string has any non-alphabetic characters, it fails the RegEx test.  
+// conditional check
+// 26 unique Charcters  >>uniqueChars.size
+// a-z        >>/^[a-z]+$/.test(lowercaseStr)
 
-// if (uniqueChars.size === 26 && /^[a-z]+$/.test(lowercaseStr)) {
-    //print yes
-// } else {
-//     print no
-// }
-// }
+// if(uniqueChars.size==26 && /^[a-z]+$/.test(lowercaseStr)){
+// print yes
+// }else {print no}
 
-// 🚀 **JavaScript Implementation:**
-function areComplementary(string1, string2){
-    // Step 1: Combine the strings
-    let combinedStr = string1 + string2;
+function areComplementary(string1,string2){
+   // console.log(string1,string2)
+
+    let combinedStr=string1+string2
+    //console.log(combinedStr)
+
     let lowercaseStr=combinedStr.toLowerCase()
-    // Step 2: Convert to lowercase and create a Set for unique characters
-    let uniqueChars = new Set(lowercaseStr);
+    //console.log(lowercaseStr)
 
-    // Step 3: Check for 26 unique letters using Set size and RegEx
-       if (uniqueChars.size === 26 && /^[a-z]+$/.test(lowercaseStr)) {
-        console.log('yes');
-    } else {
-        console.log('no');
-    }
+    let uniqueChars=new Set(lowercaseStr)
+    //console.log(uniqueChars)
+    //console.log(uniqueChars.size)
+
+    if(uniqueChars.size==26 && /^[a-z]+$/.test(lowercaseStr)){
+        console.log("Yes")
+    }else{
+        console.log("No")
+    }   
+
 }
+areComplementary("ABDCFGIJKLMNOPQUVWXYZ","EHRST")
+areComplementary("AABBCC","DDEEFF")
 
-// 📊 **Test Cases:**
-areComplementary('ABDCFGIJKLMNOPQUVWXYZ', 'EHRST');   // ✅ Output: 'yes'
-// areComplementary('ABCDEFGH', 'IJKLMNOPQRSTUVWXYZ');  // ✅ Output: 'yes'
-// areComplementary('ABCDEFGHIJKLM', 'NOPQRSTUVWXY');  // ❌ Output: 'no'
-// areComplementary('AABBCC', 'DDEEFF');               // ❌ Output: 'no'
 
-// 💡 **Why is this challenge useful?**
-// - Helps in understanding string manipulation, Sets, and the use of Regular Expressions in JavaScript.  
-// - RegEx knowledge is crucial for validating patterns and filtering data effectively.  
 
-// 🎉 **Don't forget to Like, Share, and Subscribe for more coding challenges!**
-// 🚀 **Keep coding and pushing your limits! See you tomorrow with another challenge!**
