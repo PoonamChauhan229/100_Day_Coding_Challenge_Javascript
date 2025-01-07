@@ -1,18 +1,28 @@
-// Give me code for adding 2 numbers
-// Wishing you all a Merry Christmas filled with joy, laughter, and lots of coding! Let's make this holiday season even brighter with some amazing JavaScript challenges! 🚀
+const userInput = [
+    '2',
+    '7',
+    '2 4 6 8 9 10 12',
+    '2 4 6 8 10 12',
+    '6',
+    '3 5 7 9 11 13',
+    '3 5 7 11 13'
+];
 
-// i=1 >> 4<3 >> false >> 
-// i=2 >> 9<3 >> false >> 
-// i=3 >> 1<3 >> true >> min=1 
-// i=4 >> 6<1 >> false >> 
-// i=5 >> loop terminate >> min=1
+const results = [];
+let index = 0;
+const testCases = parseInt(userInput[index++]);
 
-// Today’s challenge is inspired by a problem from the **CodeKata** section of GUVI. Shoutout to GUVI for providing such an amazing platform to practice coding challenges! 🙌
+for (let t = 0; t < testCases; t++) {
+    const N = parseInt(userInput[index++]);
+    const batchA = userInput[index++].split(' ').map(Number);
+    const batchB = userInput[index++].split(' ').map(Number);
 
-// Why is this challenge useful?
-// This challenge enhances problem-solving skills by teaching how to work with Fibonacci-like sequences and cumulative calculations. It also demonstrates efficient iterative techniques, avoiding recursion for better performance in real-world scenarios.
+    for (let i = 0; i < batchA.length; i++) {
+        if (!batchB.includes(batchA[i])) {
+            results.push(i + 1); // Return the package index (1-based)
+            break;
+        }
+    }
+}
 
-// Thanks for joining me, and don't forget to check out CodeKata on GUVI for more amazing challenges! 💻
-// Keep coding, keep growing, and I’ll see you in the next video! ✨
-
-
+results.forEach(result => console.log(result));
