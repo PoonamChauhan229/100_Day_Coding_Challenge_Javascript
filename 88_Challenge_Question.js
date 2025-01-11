@@ -1,16 +1,10 @@
-// Write a function to create an object with keys as numbers and values as their squares.
+// Convert an array of objects into a single merged object.
 
-function createSquareObject(n) {
-    const result = {};
-    
-    for (let i = 1; i <= n; i++) {
-        result[i] = i * i; // Square of each number
-    }
-    
-    return result;
+function mergeObjects(arr) {
+    return arr.reduce((acc, obj) => Object.assign(acc, obj), {});
 }
 
 // Example usage:
-const squareObj = createSquareObject(5);
-console.log(squareObj);
-// Output: { 1: 1, 2: 4, 3: 9, 4: 16, 5: 25 }
+const arr = [{ a: 1 }, { b: 2 }, { c: 3 }];
+const mergedObject = mergeObjects(arr);
+console.log(mergedObject); // { a: 1, b: 2, c: 3 }

@@ -1,18 +1,15 @@
-// Check if all object values are of the same data type.
-function areAllValuesSameType(obj) {
-    const values = Object.values(obj);
-    if (values.length === 0) return true; // Return true for an empty object
+// Count how many times each value appears in an object.
+function countValueOccurrences(obj) {
+    const count = {};
 
-    const firstType = typeof values[0]; // Get the type of the first value
+    for (const value of Object.values(obj)) {
+        count[value] = (count[value] || 0) + 1;
+    }
 
-    return values.every(value => typeof value === firstType);
+    return count;
 }
 
 // Example usage:
-const obj1 = { a: 1, b: 2, c: 3 };
-const obj2 = { a: 1, b: "text", c: 3 };
-const obj3 = {};
-
-console.log(areAllValuesSameType(obj1)); // true
-console.log(areAllValuesSameType(obj2)); // false
-console.log(areAllValuesSameType(obj3)); // true (empty object)
+const obj = { a: 1, b: 2, c: 1, d: 3, e: 2 };
+const valueCounts = countValueOccurrences(obj);
+console.log(valueCounts); // { '1': 2, '2': 2, '3': 1 }

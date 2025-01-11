@@ -1,12 +1,12 @@
-// Create a function to find the sum of all numeric values in an object.
+// Write a function to find the longest string value in an object.
 
-function sumNumericValues(obj) {
+function findLongestString(obj) {
     return Object.values(obj)
-        .filter(value => typeof value === 'number') // Filter only numeric values
-        .reduce((sum, value) => sum + value, 0); // Sum up the numeric values
+        .filter(value => typeof value === 'string') // Filter only string values
+        .reduce((longest, current) => current.length > longest.length ? current : longest, '');
 }
 
 // Example usage:
-const obj = { a: 1, b: 2, c: 'text', d: 3 };
-const sum = sumNumericValues(obj);
-console.log(sum); // Output: 6
+const obj = { a: 'apple', b: 'banana', c: 'kiwi', d: 'grapefruit' };
+const longestString = findLongestString(obj);
+console.log(longestString); // Output: 'grapefruit'

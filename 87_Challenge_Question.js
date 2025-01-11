@@ -1,10 +1,16 @@
-// Write a function to return an array of objects containing both key and value pairs.
-function objectToArrayOfObjects(obj) {
-    return Object.entries(obj).map(([key, value]) => ({ key, value }));
+// Write a function to create an object with keys as numbers and values as their squares.
+
+function createSquareObject(n) {
+    const result = {};
+    
+    for (let i = 1; i <= n; i++) {
+        result[i] = i * i; // Square of each number
+    }
+    
+    return result;
 }
 
 // Example usage:
-const obj = { a: 1, b: 2, c: 3 };
-const result = objectToArrayOfObjects(obj);
-console.log(result);
-// Output: [ { key: 'a', value: 1 }, { key: 'b', value: 2 }, { key: 'c', value: 3 } ]
+const squareObj = createSquareObject(5);
+console.log(squareObj);
+// Output: { 1: 1, 2: 4, 3: 9, 4: 16, 5: 25 }
