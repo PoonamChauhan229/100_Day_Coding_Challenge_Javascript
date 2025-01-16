@@ -1,9 +1,3 @@
-// Hey Everyone 👋🏻 Welcome Back to Code with Poonam!
-// It's Day 88 of the 100 Days of JavaScript Coding Challenge!
-
-// 🌟 Today's challenge is to find the sum of all numeric values in an object.
-
-// 📝 **Problem Statement:**  
 // Write a JavaScript function to calculate the sum of all numeric values in an object.
 
 // 📦 **Input:** { a: 1, b: 2, c: 'text', d: 3 }  
@@ -15,57 +9,57 @@
 // 📦 **Input:** { m: 100, n: 200, o: 'JS', p: true }
 // 📦 **Output:** 300
 
-// 🛠️ **Approach (Step by Step Explanation):**
+// JavaScript function                >>sumNumericValues()
+// the sum of all numeric values in an object.
 
-// 1️⃣ **Extract Values:**  
-//    - Use `Object.values()` to get an array of all values in the object.  
-  // { a: 1, b: 2, c: 'text', d: 3 }  
-  // Object.values(obj) >> [1, 2, 'text', 3]
+// Approach:
+// Extract Values >>Object.values() >>return an array of values of object
+// Object.values()
+// obj={ a: 1, b: 2, c: 'text', d: 3 } 
+// Object.values(obj) >>[1,2,"text",3] >>objArr
 
-// 2️⃣ **Filter Numeric Values:**  
-//    - Use `filter()` to keep only the numeric values.  
+// Extract Numeric Values >>Filter Method
+// arr.filter(cbk function) >>passes test >> true value array
+// objArr.filter((element)=>typeof element == "number") >>test >>[1,2,3]
+// numericValues
 
-// ✅ **filter() Method Explanation:**  
-// - The `filter()` method creates a new array with all elements that pass a test provided by a callback function.  
-// **Syntax:** `array.filter(callbackFunction)`  
-// **Example:** `[1, 'text', 3].filter(value => typeof value === 'number')`  
-// **Output:** `[1, 3]`
+// Calculate the sum >>Reduce Method
+// arr.reduce((acc,cv)=>acc+cv,initialValue) >>initialValue=0
+// numericValues.reduce((acc,cv)=>acc+cv,0) >>6
 
-// 3️⃣ **Calculate Sum:**  
-//    - Use `reduce()` to calculate the sum of the numeric values.  
+// [1,2,3] , initialValue=0
+// acc=0 || cv=1  >>acc+cv >>0+1 >>1 
+// acc=1 || cv=2  >>acc+cv >>1+2 >>3
+// acc=3 || cv=3  >>acc+cv >>3+3 >>6
+// 6 >> Sum
 
-// ✅ **reduce() Method Explanation:**  
-// - The `reduce()` method executes a reducer function on each element of the array, resulting in a single output value.  
-// **Syntax:** `array.reduce((accumulator, currentValue) => { return accumulator + currentValue }, initialValue)`  
-// **Example:** `[1, 3].reduce((acc, curr) => acc + curr, 0)`  
-// **Output:** `4`
+// Print Sum >> Final Output
 
-// 🚀 **JavaScript Implementation:**
-function sumNumericValues(obj) {
-  // Step 1: Extract all values
-  const objValues = Object.values(obj);
-  console.log("Object Values:", objValues);
+function sumNumericValues(obj){
+  //console.log(obj)
+  // Extract Values
+  let objArr=Object.values(obj)
+ // console.log(objArr)
 
-  // Step 2: Filter numeric values using filter()
-  const numericValues = objValues.filter(value => typeof value === "number");
-  console.log("Filtered Numeric Values:", numericValues);
+  // Extract Numeric Values >>filter()
+  let numericValues=objArr.filter((element)=>typeof element == "number")
+ // console.log(numericValues)
 
-  // Step 3: Calculate the sum using reduce()
-  const sum = numericValues.reduce((acc, curr) => acc + curr, 0);
-  console.log("Sum of Numeric Values:", sum);
+  // Calculate the Sum >>reduce()
+  let sum=numericValues.reduce((acc,cv)=>acc+cv,0)
+  console.log(sum)
 
 }
+sumNumericValues({ a: 1, b: 2, c: 'text', d: 3 })
+sumNumericValues({ x: 10, y: 'hello', z: 5 })
+sumNumericValues({ m: 100, n: 200, o: 'JS', p: true })
 
-// 🔢 **Test Cases with Input and Output:**
- sumNumericValues({ a: 1, b: 2, c: 'text', d: 3 }) // Output: 6
 
-const obj2 = { x: 10, y: 'hello', z: 5 };sumNumericValues({ x: 10, y: 'hello', z: 5 }) // Output: 15
- sumNumericValues({ m: 100, n: 200, o: 'JS', p: true });  // Output: 300
 
-// 💡 **Why is this challenge useful?**
-// - Enhances understanding of **Object.values()**, **filter()**, and **reduce()**.  
-// - Useful for **data processing** and **object manipulation**.  
-// - Great for **interview preparation** and **real-world applications**.  
 
-// 🎯 Keep coding and keep improving your JavaScript skills! 🚀
-// Don't forget to like, subscribe, and hit the notification bell for more daily challenges. 🎉
+
+
+
+
+
+
