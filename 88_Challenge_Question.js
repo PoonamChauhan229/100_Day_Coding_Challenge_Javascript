@@ -1,59 +1,71 @@
 // Hey Everyone 👋🏻 Welcome Back to Code with Poonam!
 // It's Day 88 of the 100 Days of JavaScript Coding Challenge!
 
-// 🌟 Today’s challenge is to convert an array of objects into a single merged object.
+// 🌟 Today's challenge is to find the sum of all numeric values in an object.
 
 // 📝 **Problem Statement:**  
-// Write a JS function to convert an array of objects into a single merged object.
+// Write a JavaScript function to calculate the sum of all numeric values in an object.
 
-// 📦 **Input:** [{ a: 1 }, { b: 2 }, { c: 3 }]  
-// 📦 **Output:** { a: 1, b: 2, c: 3 }
+// 📦 **Input:** { a: 1, b: 2, c: 'text', d: 3 }  
+// 📦 **Output:** 6  
 
-// 📦 **Input:** [{a: "apple"}, {b: "banana"}, {c: "apple"}, {d: "grape"}]  
-// 📦 **Output:** { apple: 2, banana: 1, grape: 1 }
+// 📦 **Input:** { x: 10, y: 'hello', z: 5 }  
+// 📦 **Output:** 15  
+
+// 📦 **Input:** { m: 100, n: 200, o: 'JS', p: true }
+// 📦 **Output:** 300
 
 // 🛠️ **Approach (Step by Step Explanation):**
 
-// 1️⃣ **Initialize an Empty Object:**  
-//    - Create an empty object `result` to store merged data.
-//  result={}
+// 1️⃣ **Extract Values:**  
+//    - Use `Object.values()` to get an array of all values in the object.  
+  // { a: 1, b: 2, c: 'text', d: 3 }  
+  // Object.values(obj) >> [1, 2, 'text', 3]
 
-// 2️⃣ **Loop through the Array:**  
-//    - Use a `for` loop to iterate through each object in the array.
-//     Inside the loop, merge each object into the `result` object.
-//    - For each object, loop through its properties.
-//    for(let i=0;i<arr.length;i++){
-//    Spread Operator >>Spreads all the properties of an obj
-//      We are creating the shallow copy of the result object and upating it with the values of the current object.
-//      and Finally our result object  will have the merged values of all the objects in the array.
-//        result={...result, ...arr[i]}
-// }
+// 2️⃣ **Filter Numeric Values:**  
+//    - Use `filter()` to keep only the numeric values.  
 
-// 4️⃣ **Print the Result:**  
-//    - Print the merged object.
+// ✅ **filter() Method Explanation:**  
+// - The `filter()` method creates a new array with all elements that pass a test provided by a callback function.  
+// **Syntax:** `array.filter(callbackFunction)`  
+// **Example:** `[1, 'text', 3].filter(value => typeof value === 'number')`  
+// **Output:** `[1, 3]`
+
+// 3️⃣ **Calculate Sum:**  
+//    - Use `reduce()` to calculate the sum of the numeric values.  
+
+// ✅ **reduce() Method Explanation:**  
+// - The `reduce()` method executes a reducer function on each element of the array, resulting in a single output value.  
+// **Syntax:** `array.reduce((accumulator, currentValue) => { return accumulator + currentValue }, initialValue)`  
+// **Example:** `[1, 3].reduce((acc, curr) => acc + curr, 0)`  
+// **Output:** `4`
 
 // 🚀 **JavaScript Implementation:**
-function mergeObjects(arr) {
-    let result = {};
-    
-    for (let i = 0; i < arr.length; i++) {
-        result = { ...result, ...arr[i] }; // Step 3:Creating a Shallow Copy and Merging objects
-    }
-    
-    console.log("Merged Object:", result); // Step 4: Print the result
+function sumNumericValues(obj) {
+  // Step 1: Extract all values
+  const objValues = Object.values(obj);
+  console.log("Object Values:", objValues);
+
+  // Step 2: Filter numeric values using filter()
+  const numericValues = objValues.filter(value => typeof value === "number");
+  console.log("Filtered Numeric Values:", numericValues);
+
+  // Step 3: Calculate the sum using reduce()
+  const sum = numericValues.reduce((acc, curr) => acc + curr, 0);
+  console.log("Sum of Numeric Values:", sum);
+
 }
 
 // 🔢 **Test Cases with Input and Output:**
-mergeObjects([{ a: 1 }, { b: 2 }, { c: 3 }]);  
-// Output: { a: 1, b: 2, c: 3 }
+ sumNumericValues({ a: 1, b: 2, c: 'text', d: 3 }) // Output: 6
 
-mergeObjects([{ a: "apple" }, { b: "banana" }, { c: "apple" }, { d: "grape" }]);  
-// Output: { apple: 2, banana: 1, grape: 1 }
+const obj2 = { x: 10, y: 'hello', z: 5 };sumNumericValues({ x: 10, y: 'hello', z: 5 }) // Output: 15
+ sumNumericValues({ m: 100, n: 200, o: 'JS', p: true });  // Output: 300
 
 // 💡 **Why is this challenge useful?**
-// - Improves understanding of **spread operator** and **object merging**.  
-// - Useful for working with **data transformation** and **aggregating data**.  
-// - Great for **interview practice** and **real-world coding tasks**.  
+// - Enhances understanding of **Object.values()**, **filter()**, and **reduce()**.  
+// - Useful for **data processing** and **object manipulation**.  
+// - Great for **interview preparation** and **real-world applications**.  
 
 // 🎯 Keep coding and keep improving your JavaScript skills! 🚀
-// Don't forget to like, subscribe, and hit the notification bell for more challenges. 🎉
+// Don't forget to like, subscribe, and hit the notification bell for more daily challenges. 🎉
