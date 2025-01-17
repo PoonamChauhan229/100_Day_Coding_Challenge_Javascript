@@ -1,9 +1,3 @@
-// Hey Everyone 👋🏻 Welcome Back to Code with Poonam!
-// It's Day 89 of the 100 Days of JavaScript Coding Challenge!
-
-// 🌟 Today's challenge is to find the sum of all even numeric values in an object.
-
-// 📝 **Problem Statement:**  
 // Write a JavaScript function to calculate the sum of all even numeric values in an object.
 
 // 📦 **Input:** { a: 1, b: 2, c: 'text', d: 3, e: 8 }  
@@ -15,59 +9,50 @@
 // 📦 **Input:** { m: 100, n: 200, o: 'JS', p: true, q: 6 }
 // 📦 **Output:** 306
 
-// 🛠️ **Approach (Step by Step Explanation):**
+// JavaScript function    >>sumEvenNumericValues()
+// sum of all even numeric values in an object.
 
-// 1️⃣ **Extract Values:**  
-//    - Use `Object.values()` to get an array of all values in the object.  
-//    { a: 1, b: 2, c: 'text', d: 3, e: 8 }  
-//    Object.values(obj) >> [1, 2, 'text', 3, 8]
+// Approach:
+// Extract Values
+// Object.values() >>array of value of object
+// obj={ a: 1, b: 2, c: 'text', d: 3, e: 8 } 
+// Object.values(obj)>>[1,2,"text",3,8] >>objValues
 
-// 2️⃣ **Filter Even Numeric Values:**  
-//    - Use `filter()` to keep only the even numeric values.  
+// Extract even numeric values >>filter()
+// arr.filter(cbk function)>>condition >>passes >>[] true values >>elements of that array
+// objValues.filter(()=>)
+// condition >> 
+// numerical value check >>typeof element ==="number"
+// even value check >>element %2==0
+// && operator
+// objValues.filter((element)=>typeof element ==="number" && element%2==0)
+// [2,8] >>evenNumericValues
 
-// ✅ **filter() Method Explanation:**  
-// - The `filter()` method creates a new array with all elements that pass a test provided by a callback function.  
-// **Syntax:** `array.filter(callbackFunction)`  
-// **Example:** `[1, 'text', 3, 8].filter(value => typeof value === 'number' && value % 2 === 0)`  
-// **Output:** `[2, 8]`
+// Calculate the sum >>reduce()
+// arr.reduce((acc,cv)=>acc+cv,initialvalue)
+// evenNumericValues.reduce((acc,cv)=>acc+cv,0)
 
-// 3️⃣ **Calculate Sum:**  
-//    - Use `reduce()` to calculate the sum of the even numeric values.  
+// initialvalue=0 ||acc=0 ||[2,8]
+// acc=0 cv=2 >>acc+cv =0+2 =2
+// acc=2 cv=8 >>acc+cv =2+8 =10 >>Sum
 
-// ✅ **reduce() Method Explanation:**  
-// - The `reduce()` method executes a reducer function on each element of the array, resulting in a single output value.  
-// **Syntax:** `array.reduce((accumulator, currentValue) => { return accumulator + currentValue }, initialValue)`  
-// **Example:** `[2, 8].reduce((acc, curr) => acc + curr, 0)`  
-// **Output:** `10`
+// Print Sum >>Final Output 
 
-// 🚀 **JavaScript Implementation:**
-function sumEvenNumericValues(obj) {
-  // Step 1: Extract all values
-  const objValues = Object.values(obj);
-  console.log("Object Values:", objValues);
+function sumEvenNumericValues(obj){
+  //console.log(obj)
+  // Extract Value
+  let objValues=Object.values(obj)
+  //console.log(objValues)
 
-  // Step 2: Filter even numeric values using filter()
-  const evenNumericValues = objValues.filter(value => typeof value === "number" && value % 2 === 0);
-  console.log("Filtered Even Numeric Values:", evenNumericValues);
+  // Extract even numeric values 
+  let evenNumericValues=objValues.filter((element)=>typeof element ==="number" && element%2==0)
+  //console.log(evenNumericValues)
 
-  // Step 3: Calculate the sum using reduce()
-  const sum = evenNumericValues.reduce((acc, curr) => acc + curr, 0);
-  console.log("Sum of Even Numeric Values:", sum);
-
+  //Calculate the sum
+  let sum=evenNumericValues.reduce((acc,cv)=>acc+cv,0)
+  console.log(sum)
 }
+sumEvenNumericValues({ a: 1, b: 2, c: 'text', d: 3, e: 8 })
+sumEvenNumericValues({ x: 10, y: 'hello', z: 5, w: 4 }  )
+sumEvenNumericValues({ m: 100, n: 200, o: 'JS', p: true, q: 6 })
 
-// 🔢 **Test Cases with Input and Output:**
-sumEvenNumericValues({ a: 1, b: 2, c: 'text', d: 3, e: 8 }) // Output: 10
-
-const obj2 = { x: 10, y: 'hello', z: 5, w: 4 };
-sumEvenNumericValues(obj2) // Output: 14
-
-sumEvenNumericValues({ m: 100, n: 200, o: 'JS', p: true, q: 6 });  // Output: 306
-
-// 💡 **Why is this challenge useful?**
-// - Improves skills in **object manipulation** and using **array methods** like **filter()** and **reduce()**.
-// - Great practice for **data processing** and **aggregation** tasks in real-world applications.
-// - Excellent for **interview preparation** involving data handling and manipulation challenges.
-
-// 🎯 Keep coding and keep improving your JavaScript skills! 🚀
-// Don't forget to like, subscribe, and hit the notification bell for more daily challenges. 🎉
