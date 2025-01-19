@@ -1,40 +1,45 @@
-// Create a simple class that represents a Car, with properties like make, model, and methods like start and stop.
-class Car {
-    constructor(make, model) {
-        this.make = make;  // Car's make (e.g., Toyota, Ford)
-        this.model = model; // Car's model (e.g., Corolla, Mustang)
-        this.isRunning = false; // Tracks if the car is running
+class ShoppingCart {
+    constructor() {
+        this.items = []; // Initialize an empty array to store items
     }
 
-    // Start the car
-    start() {
-        if (this.isRunning) {
-            console.log(`${this.make} ${this.model} is already running.`);
+    // Add item to the cart
+    addItem(item, price, quantity = 1) {
+        const existingItem = this.items.find(i => i.item === item);
+        if (existingItem) {
+            existingItem.quantity += quantity; // If item exists, increase quantity
         } else {
-            this.isRunning = true;
-            console.log(`${this.make} ${this.model} started.`);
+            this.items.push({ item, price, quantity }); // Add new item
         }
     }
 
-    // Stop the car
-    stop() {
-        if (!this.isRunning) {
-            console.log(`${this.make} ${this.model} is already stopped.`);
-        } else {
-            this.isRunning = false;
-            console.log(`${this.make} ${this.model} stopped.`);
-        }
+    // Remove item from the cart
+    removeItem(item) {
+        this.items = this.items.filter(i => i.item !== item); // Remove item by filtering out
     }
 
-    // Display car details
-    getCarDetails() {
-        return `${this.make} ${this.model}`;
+    // Calculate the total price of the items in the cart
+    calculateTotal() {
+        return this.items.reduce((total, { price, quantity }) => total + price * quantity, 0);
+    }
+
+    // Show all items in the cart
+    showItems() {
+        return this.items;
     }
 }
 
-// Example usage
-const myCar = new Car('Toyota', 'Corolla');
-console.log(myCar.getCarDetails()); // Output: Toyota Corolla
-myCar.start(); // Output: Toyota Corolla started.
-myCar.stop();  // Output: Toyota Corolla stopped.
-myCar.stop();  // Output: Toyota Corolla is already stopped.
+// Example usage:
+const cart = new ShoppingCart();
+cart.addItem('Apple', 1.5, 3);
+cart.addItem('Banana', 0.5, 5);
+cart.addItem('Orange', 2, 2);
+
+console.log(cart.showItems()); // Output: [ { item: 'Apple', price: 1.5, quantity: 3 }, { item: 'Banana', price: 0.5, quantity: 5 }, { item: 'Orange', price: 2, quantity: 2 } ]
+
+console.log('Total Price:', cart.calculateTotal()); // Output: Total Price: 13
+
+cart.removeItem('Banana');
+
+console.log(cart.showItems()); // Output: [ { item: 'Apple', price: 1.5, quantity: 3 }, { item: 'Orange', price: 2, quantity: 2 } ]
+console.log('Total Price:', cart.calculateTotal()); // Output: Total Price: 11
