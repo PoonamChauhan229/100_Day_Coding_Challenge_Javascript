@@ -1,9 +1,3 @@
-// Hey Everyone 👋🏻 Welcome Back to Code with Poonam!
-// It's Day 91 of the 100 Days of JavaScript Coding Challenge!
-
-// 🌟 Today's challenge is to find the length of the longest string value in an object.
-
-// 📝 **Problem Statement:**  
 // Write a JavaScript function to calculate the length of the longest string value in an object.
 
 // 📦 **Input:** { a: 'apple', b: 'banana', c: 'kiwi', d: 'grapefruit' }  
@@ -15,61 +9,67 @@
 // 📦 **Input:** { m: 'short', n: 'tiny', o: 'lengthyword', p: 'word' }  
 // 📦 **Output:** 11
 
-// 🛠️ **Approach (Step-by-Step Explanation):**
+// JavaScript function                 >>findLongestStringLength()
+// length of the longest string value in an object. 
 
-// 1️⃣ **Extract Object Values:**  
-//    - Use `Object.values()` to extract all values from the object.  
-//    - **Definition:** `Object.values(obj)` returns an array of the object's values.  
-//    - Example: `{ a: 'apple', b: 'banana' } -> ['apple', 'banana']`
+// { a: 'apple', b: 'banana', c: 'kiwi', d: 'grapefruit' }  
+// apple        >>5
+// banana       >>6
+// kiwi         >>4
+// grapefruit   >>10
+// 10 >>length
 
-// 2️⃣ **Filter String Values:**  
-//    - Use `filter()` to retain only the string values.  
-//    - **Definition:** The `filter()` method creates a new array with elements that pass the provided test function.  
-//    - Example: `['apple', 'banana', 42].filter(element => typeof element === 'string') -> ['apple', 'banana']`
+// { x: 'elephant', y: 'giraffe', z: 'hippopotamus' } 
+// elephant         >>8
+// giraffe          >>7
+// hippopotamus     >>12
+//12
 
-// 3️⃣ **Calculate String Lengths:**  
-//    - Use `map()` to convert each string into its length.  
-//    - **Definition:** The `map()` method creates a new array populated with the results of calling a provided function on every element in the array.  
-//    - Example: `['apple', 'banana'].map(element => element.length) -> [5, 6]`
+// { m: 'short', n: 'tiny', o: 'lengthyword', p: 'word' } 
+// short           >>5
+// tiny            >>4
+// lengthyword     >>11
+// word            >>4
+// 11
 
-// 4️⃣ **Find the Maximum Length:**  
-//    - Use `Math.max()` to find the longest string length.  
-//    - **Definition:** `Math.max()` returns the largest number from the provided numbers or array. Use the spread operator (`...`) to pass an array as individual arguments.  
-//    - Example: `Math.max(...[5, 6]) -> 6`
+// Approach:
+// Extract Values
+// Object.values() >>return an array of the values of Object
+// obj={ a: 'apple', b: 'banana', c: 'kiwi', d: 'grapefruit' }
+// Object.values(obj)
+// ["apple","banana","kiwi","grapefruit"] >>objValues
 
-// 🚀 **JavaScript Implementation:**
-function findLongestStringLength(obj) {
-    // Step 1: Extract all values from the object
-    const objValues = Object.values(obj);
-    console.log("Object Values:", objValues);
+// Each element >>String >>filter()
+// arr.filter(cbk function) >>condition >>passess>> true values >>[]
+// objValues.filter((element)=>typeof element ==="string")
+// ["apple","banana","kiwi","grapefruit"] >>stringValues
 
-    // Step 2: Filter only string values
-    const stringValues = objValues.filter(value => typeof value === 'string');
-    console.log("Filtered String Values:", stringValues);
+// map() || length
+// arr.map(cbk function) >>transform >>[]
+// stringValues.map((element)=>element.length)
+// [5,6,4,10]
 
-    // Step 3: Map string values to their lengths
-    const stringLengths = stringValues.map(str => str.length);
-    console.log("String Lengths:", stringLengths);
+// Find max length
+// Math.max() || Spread Operator
+// Math.max(...[5,6,4,10])
+// 10 >>Max Length
 
-    // Step 4: Find the maximum string length
-    const longestLength = Math.max(...stringLengths);
-    console.log("Longest String Length:", longestLength);
+function findLongestStringLength(obj){
+    //console.log(obj)
+
+    let objValues=Object.values(obj)
+   // console.log(objValues)
+
+    let stringValues=objValues.filter((element)=>typeof element ==="string")
+    //console.log(stringValues)
+
+    let stringLength=stringValues.map((element)=>element.length)
+    //console.log(stringLength)
+
+    let longestLength=Math.max(...stringLength)
+    console.log(longestLength)
 }
-
-// 🔢 **Test Cases with Input and Output:**
-findLongestStringLength({ a: 'apple', b: 'banana', c: 'kiwi', d: 'grapefruit' });  
-// Output: 10
-
-findLongestStringLength({ x: 'elephant', y: 'giraffe', z: 'hippopotamus' });  
-// Output: 12
-
-findLongestStringLength({ m: 'short', n: 'tiny', o: 'lengthyword', p: 'word' });  
-// Output: 11
-
-// 💡 **Why is this challenge useful?**
-// - Improves understanding of **Object.values()**, **filter()**, **map()**, and **Math.max()**.  
-// - Teaches how to manipulate and process **string data** in objects effectively.  
-// - Helps with practical **data processing** and **interview preparation** scenarios.  
-
-// 🎯 Keep coding and keep improving your JavaScript skills! 🚀
-// Don't forget to like, subscribe, and hit the notification bell for more daily challenges. 🎉
+findLongestStringLength({ a: 'apple', b: 'banana', c: 'kiwi', d: 'grapefruit' })
+findLongestStringLength({ x: 'elephant', y: 'giraffe', z: 'hippopotamus' })
+findLongestStringLength({ m: 'short', n: 'tiny', o: 'lengthyword', p: 'word' } )
+findLongestStringLength({a:75,b:"hair",c:"shoes",d:100})

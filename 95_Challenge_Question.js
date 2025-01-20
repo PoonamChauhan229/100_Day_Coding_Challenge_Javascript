@@ -1,32 +1,32 @@
-// Create a class to handle user registration and ensure the unique validation of a username.
-
-class UserRegistration {
-    constructor() {
-        this.users = []; // Initialize an empty array to store registered users
+// class that implements getter and setter methods for the name property only
+class Person {
+    constructor(name) {
+        this._name = name; // Private property with an underscore convention
     }
 
-    // Register a new user
-    register(username, password) {
-        // Check if the username already exists
-        if (this.users.some(user => user.username === username)) {
-            return 'Username already exists. Please choose a different username.';
+    // Getter method for name
+    get name() {
+        return this._name;
+    }
+
+    // Setter method for name
+    set name(value) {
+        if (value.trim() === '') {
+            console.log('Name cannot be empty.');
         } else {
-            // Add the new user to the users list
-            this.users.push({ username, password });
-            return 'User registered successfully!';
+            this._name = value;
         }
-    }
-
-    // Show all registered users (for demonstration purposes)
-    showUsers() {
-        return this.users;
     }
 }
 
 // Example usage
-const registrationSystem = new UserRegistration();
-console.log(registrationSystem.register('john_doe', 'password123')); // Output: User registered successfully!
-console.log(registrationSystem.register('jane_doe', 'password456')); // Output: User registered successfully!
-console.log(registrationSystem.register('john_doe', 'newpassword')); // Output: Username already exists. Please choose a different username.
+const person = new Person('John');
+console.log(person.name); // Output: John
 
-console.log('Registered Users:', registrationSystem.showUsers());
+// Using setter to update name
+person.name = 'Alice'; // Valid name update
+console.log(person.name); // Output: Alice
+
+// Using setter to enter an invalid value
+person.name = ''; // Output: Name cannot be empty.
+console.log(person.name); // Output: Alice (name remains unchanged)

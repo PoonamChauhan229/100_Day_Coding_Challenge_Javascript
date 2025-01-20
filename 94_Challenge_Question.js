@@ -1,32 +1,40 @@
-// class that implements getter and setter methods for the name property only
-class Person {
-    constructor(name) {
-        this._name = name; // Private property with an underscore convention
+// Create a simple class that represents a Car, with properties like make, model, and methods like start and stop.
+class Car {
+    constructor(make, model) {
+        this.make = make;  // Car's make (e.g., Toyota, Ford)
+        this.model = model; // Car's model (e.g., Corolla, Mustang)
+        this.isRunning = false; // Tracks if the car is running
     }
 
-    // Getter method for name
-    get name() {
-        return this._name;
-    }
-
-    // Setter method for name
-    set name(value) {
-        if (value.trim() === '') {
-            console.log('Name cannot be empty.');
+    // Start the car
+    start() {
+        if (this.isRunning) {
+            console.log(`${this.make} ${this.model} is already running.`);
         } else {
-            this._name = value;
+            this.isRunning = true;
+            console.log(`${this.make} ${this.model} started.`);
         }
+    }
+
+    // Stop the car
+    stop() {
+        if (!this.isRunning) {
+            console.log(`${this.make} ${this.model} is already stopped.`);
+        } else {
+            this.isRunning = false;
+            console.log(`${this.make} ${this.model} stopped.`);
+        }
+    }
+
+    // Display car details
+    getCarDetails() {
+        return `${this.make} ${this.model}`;
     }
 }
 
 // Example usage
-const person = new Person('John');
-console.log(person.name); // Output: John
-
-// Using setter to update name
-person.name = 'Alice'; // Valid name update
-console.log(person.name); // Output: Alice
-
-// Using setter to enter an invalid value
-person.name = ''; // Output: Name cannot be empty.
-console.log(person.name); // Output: Alice (name remains unchanged)
+const myCar = new Car('Toyota', 'Corolla');
+console.log(myCar.getCarDetails()); // Output: Toyota Corolla
+myCar.start(); // Output: Toyota Corolla started.
+myCar.stop();  // Output: Toyota Corolla stopped.
+myCar.stop();  // Output: Toyota Corolla is already stopped.
