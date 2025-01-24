@@ -3,9 +3,7 @@
 // 🌟 **Today's challenge is about creating a class for user registration** that ensures unique usernames.  
 // Let's break it down step by step!
 
-
-// Create a class to handle user registration and ensure the unique validation of a username.
-
+// Write a class to manage user registration and ensure the unique validation of a username.
 
 // class >>UserRegistration 
 // handle user registration
