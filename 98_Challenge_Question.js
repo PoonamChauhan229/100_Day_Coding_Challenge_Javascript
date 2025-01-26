@@ -1,3 +1,8 @@
+// 🎉 Welcome to Day 98 of the 100 Days of JavaScript Coding Challenge! 🚀
+
+// 🌟 **Today's challenge is about creating a BankAccount class** that handles deposit and withdrawal operations.  
+
+
 // Write a BankAccount class with a balance property and methods deposit and withdraw to handle bank transactions
 
 // deposit method: Adds a specified amount to the balance. The amount must be greater than 0.
@@ -70,3 +75,9 @@ class BankAccount {
   account.deposit(-10);                 // Invalid deposit
   account.withdraw(20);                  // Withdraw 20
   account.deposit(50);                  // Deposit 50
+
+//   Why Challeneg useful
+ // 💡 **Why is this important?**
+  // - Teaches how to manage state within a class, such as tracking a bank account balance.
+  // - Demonstrates how to validate input data and ensure that it meets specific conditions before taking action.
+  // - Shows how to implement methods to update and interact with class properties.
