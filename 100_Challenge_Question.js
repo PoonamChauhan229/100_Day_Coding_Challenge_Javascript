@@ -139,4 +139,3 @@ cart.calculateTotal(); // Output: Total Price: 11
 
 // 📢 "If you found this series helpful, hit that 👍 like button, subscribe, and let me know in the comments what your favorite challenge was!"
 
-
